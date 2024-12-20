@@ -88,7 +88,7 @@ nexus_shell/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/nexus_shell.git
+   git clone https://github.com/Aditya12320/NexusShell.git
    cd nexus_shell
    ```
 2. Install the dependencies:
