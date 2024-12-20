@@ -36,7 +36,10 @@ class EnhancedShell:
     def __init__(self):
         self.config_dir = Path.home() / ".mycmd"
         self.config_dir.mkdir(parents=True, exist_ok=True)
-        
+            
+        self.shell_name = "NexusShell"
+        self.version = "1.0.0"
+
         self.history_file = self.config_dir / "history.json"
         self.interactive_history_file = self.config_dir / "interactive_history.txt"
         
@@ -397,8 +400,15 @@ class EnhancedShell:
 
     def interactive_shell(self):
         """Interactive shell with integrated completion and key bindings"""
-        print("Welcome to Enhanced Python Shell!")
-        print("Type 'help' for a list of commands.")
+        print(f"""
+        ╔══════════════════════════════════════╗
+        ║           Welcome to NexusShell       ║
+        ║     Your Command Center for System    ║
+        ║    Management and Administration      ║
+        ╚══════════════════════════════════════╝
+    Version: {self.version}
+    Type 'help' to see available commands.""")
+
         print("History shortcuts: !! (last command), !n (nth command)")
 
         while True:
